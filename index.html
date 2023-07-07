@@ -17,87 +17,191 @@
 
 <body>
   <header>
-    <section id="logo">
-      <img src="assets/Asset 4@3x.png" alt="" />
-    </section>
-    <nav>
-      <section id="hamburger-menu">
-        <span></span>
-      </section>
-      <ul id="menu">
-        <li>Home Page</li>
-        <li>Products</li>
-        <li>Contact</li>
-        <li>Info</li>
-      </ul>
-    </nav>
+    <picture id="logo-container">
+      <source srcset="./assets/image/Asset 4@3x.png" type="image/png" media="(min-width: 768px)" />
+      <img src="./assets/image/Asset 4@3x.png" alt="rin married" />
+    </picture>
   </header>
+  <nav>
+    <section class="hamburger-container">
+      <div id="hamburger-btn" class="hamburger-container__menu-icon">
+        <span></span>
+      </div>
+    </section>
+    <ul id="menu-list">
+      <li>Home Page</li>
+      <li>Products</li>
+      <li>Contact</li>
+      <li>Info</li>
+    </ul>
+    <section id="container-menu-icons">
+      <picture>
+        <source srcset="./assets/image/heart.webp" type="image/webp" />
+        <img src="./assets/image/heart.png" alt="icon of favorites" />
+      </picture>
+      <picture>
+        <source srcset="./assets/image/shopping-cart.webp" type="image/webp" />
+        <img src="./assets/image/shopping-cart.png" alt="icon shopping cart" />
+      </picture>
+      <picture>
+        <source srcset="./assets/image/user.webp" type="image/webp" />
+        <img src="./assets/image/user.png" alt="icon of login" />
+      </picture>
+    </section>
+  </nav>
   <main>
-    <section id="banner">
-      <video autoplay loop>
-        <source src="./assets/video/banner-v1.mp4" type="video/mp4" />
-        <source src="./assets/video/banner-v1.webm" type="video/webm" />
+    <section id="video-container" class="banner-container">
+      <video autoplay loop muted>
+        <source src="./assets/video/banner-v1.mp4" type="video/mp4" media="(min-width: 576px)" />
+        <source src="./assets/video/banner-v1.webm" type="video/webm" media="(max-width: 576px)" />
         Your browser does not support video playback.
       </video>
+      <section>
+        <h2> 30% less </h2>
+        <p> in all the jewels </p>
+      </section>
     </section>
-    <article class="card">
-      <header class="card__description">
-        <h3>Wedding Rings</h3>
-      </header>
-      <main class="card__image">
-        <picture class="card__image">
-          <source srcset="" type="image/webp" />
-          <source srcset="./assets/image/wedding-rings.png" type="image/png" />
-          <img src="./assets/image/wedding-rings.jpg" alt="rin married" />
-        </picture>
-      </main>
-      <footer class="card__form">
-        <form>
-          <article>
-            <h2>Color Selection:</h2>
-            <section class="color-options">
-              <input type="radio" id="color-red" name="color" value="red" />
-              <label for="color-red" class="color-option">Red</label>
+    <section class="card-container">
+      <article class="card">
+        <header>
+          <h3>Wedding Rings 1</h3>
+        </header>
+        <main>
+          <picture class="card__image">
+            <source srcset="./assets/image/wedding-rings.png" type="image/png" media="(min-width: 576px) " />
+            <img src="./assets/image/wedding-rings.webp" alt="rin married" />
+          </picture>
+        </main>
+        <footer>
+          <form>
+            <article>
+              <p>Color Selection:</p>
+              <section class="color-options">
+                <label for="color-red-1" class="color-option">Red</label>
+                <input checked type="radio" id="color-red-1" name="color" value="red" />
+                <label for="color-blue-1" class="color-option">Blue</label>
+                <input type="radio" id="color-blue-1" name="color" value="blue" />
+                <label for="color-green-1" class="color-option">Green</label>
+                <input type="radio" id="color-green-1" name="color" value="green" />
+                <label for="color-yellow-1" class="color-option">Yellow</label>
+                <input type="radio" id="color-yellow-1" name="color" value="yellow" />
+              </section>
+            </article>
+            <article>
+              <p>Ring Size Selection:</p>
+              <section class="ring-sizes">
+                <label for="size-6-1" class="ring-size">6</label>
+                <input type="radio" id="size-6-1" name="size" value="6" />
+                <label for="size-7-1" class="ring-size">7</label>
+                <input type="radio" id="size-7-1" name="size" value="7" />
+                <label for="size-8-1" class="ring-size">8</label>
+                <input type="radio" id="size-8-1" name="size" value="8" />
+                <label for="size-9-1" class="ring-size">9</label>
+                <input checked type="radio" id="size-9-1" name="size" value="9" />
+              </section>
+            </article>
+            <button type="submit">Submit</button>
+          </form>
+        </footer>
+      </article>
 
-              <input type="radio" id="color-blue" name="color" value="blue" />
-              <label for="color-blue" class="color-option">Blue</label>
+      <article class="card">
+        <header>
+          <h3>Wedding Rings 2</h3>
+        </header>
+        <main>
+          <picture class="card__image">
+            <source srcset="./assets/image/wedding-rings.png" type="image/png" media="(min-width: 576px) " />
+            <img src="./assets/image/wedding-rings.webp" alt="rin married" />
+          </picture>
+        </main>
+        <footer>
+          <form>
+            <article>
+              <p>Color Selection:</p>
+              <section class="color-options">
+                <label for="color-red-2" class="color-option">Red</label>
+                <input type="radio" id="color-red-2" name="color" value="red" />
+                <label for="color-blue-2" class="color-option">Blue</label>
+                <input checked type="radio" id="color-blue-2" name="color" value="blue" />
+                <label for="color-green-2" class="color-option">Green</label>
+                <input type="radio" id="color-green-2" name="color" value="green" />
+                <label for="color-yellow-2" class="color-option">Yellow</label>
+                <input type="radio" id="color-yellow-2" name="color" value="yellow" />
+              </section>
+            </article>
+            <article>
+              <p>Ring Size Selection:</p>
+              <section class="ring-sizes">
+                <label for="size-6-2" class="ring-size">6</label>
+                <input checked type="radio" id="size-6-2" name="size" value="6" />
+                <label for="size-7-2" class="ring-size">7</label>
+                <input type="radio" id="size-7-2" name="size" value="7" />
+                <label for="size-8-2" class="ring-size">8</label>
+                <input type="radio" id="size-8-2" name="size" value="8" />
+                <label for="size-9-2" class="ring-size">9</label>
+                <input type="radio" id="size-9-2" name="size" value="9" />
+              </section>
+            </article>
+            <button type="submit">Submit</button>
+          </form>
+        </footer>
+      </article>
 
-              <input type="radio" id="color-green" name="color" value="green" />
-              <label for="color-green" class="color-option">Green</label>
-
-              <input type="radio" id="color-yellow" name="color" value="yellow" />
-              <label for="color-yellow" class="color-option">Yellow</label>
-            </section>
-          </article>
-
-          <section>
-            <h2>Ring Size Selection:</h2>
-            <div class="ring-sizes">
-              <input type="radio" id="size-6" name="size" value="6" />
-              <label for="size-6" class="ring-size">6</label>
-
-              <input type="radio" id="size-7" name="size" value="7" />
-              <label for="size-7" class="ring-size">7</label>
-
-              <input type="radio" id="size-8" name="size" value="8" />
-              <label for="size-8" class="ring-size">8</label>
-
-              <input type="radio" id="size-9" name="size" value="9" />
-              <label for="size-9" class="ring-size">9</label>
-            </div>
-          </section>
-
-          <button type="submit">Submit</button>
-        </form>
-      </footer>
-    </article>
+      <article class="card">
+        <header>
+          <h3>Wedding Rings 3</h3>
+        </header>
+        <main>
+          <picture class="card__image">
+            <source srcset="./assets/image/wedding-rings.png" type="image/png" media="(min-width: 576px) " />
+            <img src="./assets/image/wedding-rings.webp" alt="rin married" />
+          </picture>
+        </main>
+        <footer>
+          <form>
+            <article>
+              <p>Color Selection:</p>
+              <section class="color-options">
+                <label for="color-red-3" class="color-option">Red</label>
+                <input type="radio" id="color-red-3" name="color" value="red" />
+                <label for="color-blue-3" class="color-option">Blue</label>
+                <input type="radio" id="color-blue-3" name="color" value="blue" />
+                <label for="color-green-3" class="color-option">Green</label>
+                <input type="radio" id="color-green-3" name="color" value="green" />
+                <label for="color-yellow-3" class="color-option">Yellow</label>
+                <input type="radio" id="color-yellow-3" name="color" value="yellow" />
+              </section>
+            </article>
+            <article>
+              <p>Ring Size Selection:</p>
+              <section class="ring-sizes">
+                <label for="size-6-3" class="ring-size">6</label>
+                <input type="radio" id="size-6-3" name="size" value="6" />
+                <label for="size-7-3" class="ring-size">7</label>
+                <input type="radio" id="size-7-3" name="size" value="7" />
+                <label for="size-8-3" class="ring-size">8</label>
+                <input type="radio" id="size-8-3" name="size" value="8" />
+                <label for="size-9-3" class="ring-size">9</label>
+                <input type="radio" id="size-9-3" name="size" value="9" />
+              </section>
+            </article>
+            <button type="submit">Submit</button>
+          </form>
+        </footer>
+      </article>
+    </section>
   </main>
   <footer>
-    <figure>
-      <img src="/images/logo.png" alt="" />
-    </figure>
-    <article></article>
+    <picture class="card__image">
+      <source srcset="./assets/image/Asset 1@3x.png" type="image/png" media="(min-width: 576px) " />
+      <img src="./assets/image/asset-1-3x.webp" alt="rin married" />
+    </picture>
+    <article>
+      <p>© 2022 Mangata and Gallo</p>
+    </article>
   </footer>
+  <script defer type="module" src="./js/script.js"></script>
 </body>
 
 </html>
