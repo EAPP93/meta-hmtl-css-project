@@ -37,6 +37,7 @@
   --line-height-medium: 1.5;
   --line-height-large: 1.75;
 
+  --transition: all 500ms ease-in-out;
 }
 
 /* reset css */
@@ -60,6 +61,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 /* ------------------------------------------------------ */
@@ -105,7 +107,8 @@ nav .hamburger-container {
   align-items: center;
 }
 
-nav .hamburger-container__menu-icon {
+nav #hamburger-btn {
+  z-index: 5;
   width: 2rem;
   height: 2rem;
   border-radius: 0.25rem;
@@ -113,11 +116,20 @@ nav .hamburger-container__menu-icon {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  transition: var(--transition);
+  transform: translate(0);
 }
 
-nav .hamburger-container__menu-icon span,
-nav .hamburger-container__menu-icon span::before,
-nav .hamburger-container__menu-icon span::after {
+nav #hamburger-btn.active {
+  position: fixed;
+  left: 10%;
+  transform: translate(10%);
+  transform: scale(1.5);
+}
+
+nav #hamburger-btn span,
+nav #hamburger-btn span::before,
+nav #hamburger-btn span::after {
   content: " ";
   display: block;
   width: 100%;
@@ -126,23 +138,57 @@ nav .hamburger-container__menu-icon span::after {
   border-radius: 0.25rem;
 }
 
-nav .hamburger-container__menu-icon span::before {
+nav #hamburger-btn #hamburger-btn__line.active,
+nav #hamburger-btn #hamburger-btn__line.active::before,
+nav #hamburger-btn #hamburger-btn__line.active::after {
+  background-color: var(--background-white);
+}
+
+nav #hamburger-btn span::before {
   margin-top: 0.5rem;
 }
 
-nav .hamburger-container__menu-icon span::after {
+nav #hamburger-btn span::after {
   margin-top: -1.1rem;
 }
 
+
 nav #menu-list {
-  display: none;
+  background-color: var(--background-black);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: var(--font-size-medium);
+  font-family: var(--font-sans-serif);
+  font-weight: var(--font-weight-bold);
+  transition: var(--transition);
+  transform: translate(-100%);
 }
+
+nav #menu-list.active {
+  transform: translate(0);
+  color: var(--font-white);
+
+}
+
 
 nav #container-menu-icons {
   width: 40%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+nav #container-menu-icons.active {
+  display: none;
 }
 
 nav #container-menu-icons picture {
@@ -271,14 +317,14 @@ main .card-container .card footer form article {
   margin-bottom: 0.5rem;
 }
 
-main .card-container .card footer form article section {
+main .card-container.card footer form article section {
   display: flex;
   justify-content: start;
   align-items: center;
   flex-wrap: wrap;
 }
 
-main .card-container .card footer form article section>input {
+main .card-container.card footer form article section input {
   margin: 0 1rem 0 0.25rem;
 }
 
@@ -343,15 +389,20 @@ footer article {
 
   nav .hamburger-container #hamburger-btn {
     display: none;
+    transition: none;
   }
 
   nav #menu-list {
+    background-color: transparent;
+    position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: end;
     align-items: center;
     gap: 1rem;
-    list-style: none;
     text-align: center;
+    transform: translate(0);
+    transition: none;
   }
 
   nav #menu-list li {
@@ -372,9 +423,22 @@ footer article {
 }
 
 @media screen and (min-width: 992px) {
+  header #logo-container img {
+    max-width: 35%;
+  }
+
   nav #menu-list li {
     font-size: var(--font-size-medium);
     min-width: 10rem;
+  }
+
+  nav #container-menu-icons picture {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  main #video-container video {
+    height: 25rem;
   }
 
   main #video-container section h2 {
@@ -384,68 +448,9 @@ footer article {
   main #video-container section p {
     font-size: calc(var(--font-size-general) * 1.5);
   }
-}
 
-/*
-:root {
-    --bs-blue: #0d6efd;
-    --bs-indigo: #6610f2;
-    --bs-purple: #6f42c1;
-    --bs-pink: #fd526b;
-    --bs-red: #dc3545;
-    --bs-orange: #fd7e14;
-    --bs-yellow: #ffc107;
-    --bs-green: #13a24a;
-    --bs-teal: #20c997;
-    --bs-cyan: #0dcaf0;
-    --bs-black: #000;
-    --bs-white: #fff;
-    --bs-gray: #7a7a7a;
-    --bs-gray-dark: #3b3b3b;
-    --bs-gray-100: #faf8f7;
-    --bs-gray-200: #e9e8e8;
-    --bs-gray-300: #d8d8d8;
-    --bs-gray-400: #bebebe;
-    --bs-gray-500: #aaa;
-    --bs-gray-600: #7a7a7a;
-    --bs-gray-700: #555;
-    --bs-gray-800: #3b3b3b;
-    --bs-gray-900: #242424;
-    --bs-primary: #000;
-    --bs-secondary: #fff;
-    --bs-success: #13a24a;
-    --bs-danger: #fd526b;
-    --bs-cta: #ff006e;
-    --bs-primary-rgb: 0,0,0;
-    --bs-secondary-rgb: 255,255,255;
-    --bs-success-rgb: 19,162,74;
-    --bs-danger-rgb: 253,82,107;
-    --bs-cta-rgb: 255,0,110;
-    --bs-white-rgb: 255,255,255;
-    --bs-black-rgb: 0,0,0;
-    --bs-body-color-rgb: 0,0,0;
-    --bs-body-bg-rgb: 255,255,255;
-    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",roboto,"Helvetica Neue","Noto Sans","Liberation Sans",arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-    --bs-gradient: linear-gradient(180deg,hsla(0,0%,100%,.15),hsla(0,0%,100%,0));
-    --bs-body-font-family: var(--bs-font-sans-serif);
-    --bs-body-font-size: 1rem;
-    --bs-body-font-weight: 400;
-    --bs-body-line-height: 1.5;
-    --bs-body-color: #000;
-    --bs-body-bg: #fff;
-    --bs-border-width: 1px;
-    --bs-border-style: solid;
-    --bs-border-color: #d8d8d8;
-    --bs-border-color-translucent: rgba(0,0,0,.175);
-    --bs-border-radius: 10px;
-    --bs-border-radius-sm: 6px;
-    --bs-border-radius-lg: 20px;
-    --bs-border-radius-xl: 1rem;
-    --bs-border-radius-2xl: 2rem;
-    --bs-border-radius-pill: 50rem;
-    --bs-link-color: inherit;
-    --bs-link-hover-color: inherit;
-    --bs-code-color: #fd526b;
-    --bs-highlight-bg: #fff3cd;
-*/
+  main .card-container .card main .card__image img {
+    max-height: 20rem;
+  }
+
+}
