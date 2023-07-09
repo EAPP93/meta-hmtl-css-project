@@ -257,7 +257,7 @@ main .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-template-rows: auto;
-  padding: .75rem;
+  padding: .80rem;
   gap: .5rem;
 }
 
@@ -450,7 +450,7 @@ footer article {
   }
 
   main .card-container .card main .card__image img {
-    max-height: 20rem;
+    max-height: 24rem;
   }
 
 }
