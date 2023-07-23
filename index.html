@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- meta description -->
   <meta name="author" content="Mangata and Gallo" />
   <meta name="URL" content="https://mangataandgallo.com" />
   <meta name="description"
@@ -12,217 +14,268 @@
                 to stand out in your most special moments. Explore our unique collection and be dazzled by the timeless elegance of our pieces." />
   <meta name="robots" content="index, follow" />
   <title>Mangata and Gallo</title>
+
+  <!-- reset css with normalize css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- custom css -->
   <link rel="stylesheet" href="/project/css/styles.css" />
 </head>
 
-<body>
-  <header>
-    <picture id="logo-container">
-      <source srcset="./assets/image/Asset 4@3x.png" type="image/png" media="(min-width: 768px)" />
-      <img src="./assets/image/Asset 4@3x.png" alt="rin married" />
+<!-- 
+  image-xs.webp: 576 px
+  image-sm.webp: 768 px
+  image-md.webp: 992 px
+  image-lg.webp: 1200 px
+  image-xl.webp: 1440 px
+  image-xxl.webp: 2160 px
+  image-default.png: default resolution
+ -->
+
+<body id="body">
+  <!-- ************************************ header ******************************************* -->
+  <header class="header">
+    <picture class="header__logo-container">
+      <source srcset="./assets/image/logo-header-xs.webp" type="image/webp" media="(max-width: 576px )">
+      <source srcset="./assets/image/logo-header-sm.webp" type="image/webp" media="(max-width: 768px )">
+      <source srcset="./assets/image/logo-header-md.webp" type="image/webp" media="(max-width: 992px )">
+      <source srcset="./assets/image/logo-header-lg.webp" type="image/webp" media="(max-width: 1200px )">
+      <source srcset="./assets/image/logo-header-xl.webp" type="image/webp" media="(max-width: 1440px )">
+      <source srcset="./assets/image/logo-header-xxl.webp" type="image/webp" media="(max-width: 2160px )">
+      <img class="header__logo" src="./assets/image/logo-header.png" alt="Logo Mangata and Gallo">
     </picture>
   </header>
-  <nav>
-    <section class="hamburger-container">
-      <div id="hamburger-btn">
-        <span id="hamburger-btn__line"></span>
+
+  <!-- ************************************ Nav ******************************************* -->
+  <nav class="nav">
+    <section class="nav__hamburger-container">
+      <div id="hamburger-btn" class="nav__btn">
+        <span class="nav__btn-line"></span>
+        <span class="nav__btn-line"></span>
+        <span class="nav__btn-line"></span>
       </div>
     </section>
-    <ul id="menu-list">
-      <li>Home Page</li>
-      <li>Products</li>
-      <li>Contact</li>
-      <li>Info</li>
+    <ul id="menu" class="nav__menu-container">
+      <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
+      <li class="nav__item"><a class="nav__link" href="#products">Products</a></li>
+      <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+      <li class="nav__item"><a class="nav__link" href="#info">Info</a></li>
     </ul>
-    <section id="container-menu-icons">
-      <picture>
+    <section class="nav__icons-container">
+      <picture class="nav__icon">
         <source srcset="./assets/image/heart.webp" type="image/webp" />
-        <img src="./assets/image/heart.png" alt="icon of favorites" />
+        <img class="nav__img" src="./assets/image/heart.png" alt="icon of favorites" />
       </picture>
-      <picture>
+      <picture class="nav__icon">
         <source srcset="./assets/image/shopping-cart.webp" type="image/webp" />
-        <img src="./assets/image/shopping-cart.png" alt="icon shopping cart" />
+        <img class="nav__img" src="./assets/image/shopping-cart.png" alt="icon shopping cart" />
       </picture>
-      <picture>
+      <picture class="nav__icon">
         <source srcset="./assets/image/user.webp" type="image/webp" />
-        <img src="./assets/image/user.png" alt="icon of login" />
+        <img class="nav__img" src="./assets/image/user.png" alt="icon of login" />
       </picture>
     </section>
   </nav>
-  <main>
-    <section id="video-container">
-      <video autoplay loop muted>
-        <source src="./assets/video/banner-v1.mp4" type="video/mp4" media="(min-width: 576px)" />
-        <source src="./assets/video/banner-v1.webm" type="video/webm" media="(max-width: 576px)" />
+
+  <!-- ************************************ Main ******************************************* -->
+
+  <main class="main">
+    <section class="promotion">
+      <video class="promotion__video" autoplay loop muted>
+        <!--<source src="./assets/video/video-header-xs.webm" type="video/webm" media="(max-width: 576px)">
+         <source src="./assets/video/video-header-sm.webm" type="video/webm" media="(max-width: 768px)">
+         <source src="./assets/video/video-header-md.webm" type="video/webm" media="(max-width: 992px)">
+         <source src="./assets/video/video-header-lg.webm" type="video/webm" media="(max-width: 1200px)">
+         <source src="./assets/video/video-header-xl.webm" type="video/webm" media="(max-width: 1440px)">
+         <source src="./assets/video/video-header-xxl.webm" type="video/webm" media="(max-width: 2160px)">-->
+        <source src="./assets/video/banner-v1.webm" type="video/webm" media="(min-width: 576px)" />
+        <source src="./assets/video/banner-v1.mp4" type="video/mp4" media="(min-width: 1200px)" />
         Your browser does not support video playback.
       </video>
-      <section>
-        <h2> 30% less </h2>
-        <p> in all the jewels </p>
+      <section class="promotion__text-container">
+        <h1 class="promotion__title"> 30% less </h1>
+        <p class="promotion__subtitle"> in all the jewels </p>
       </section>
     </section>
-    <section class="card-container">
+    <section class="main__card-container">
+
+      <!------------------------------ card 1 ------------------------------------>
       <article class="card">
-        <header>
-          <h3>Wedding Rings 1</h3>
-        </header>
-        <main>
-          <picture class="card__image">
-            <source srcset="./assets/image/wedding-rings.png" type="image/png" media="(min-width: 576px) " />
-            <img src="./assets/image/wedding-rings.webp" alt="rin married" />
-          </picture>
-        </main>
-        <footer>
-          <form>
-            <article>
-              <p>Color Selection:</p>
-              <section class="color-options">
-                <label for="color-red-1" class="color-option">Red</label>
-                <input checked type="radio" id="color-red-1" name="color" value="red" />
-                <label for="color-blue-1" class="color-option">Blue</label>
-                <input type="radio" id="color-blue-1" name="color" value="blue" />
-                <label for="color-green-1" class="color-option">Green</label>
-                <input type="radio" id="color-green-1" name="color" value="green" />
-                <label for="color-yellow-1" class="color-option">Yellow</label>
+        <h3 class="card__title">Wedding Rings 1</h3>
+        <picture class="card__image-container">
+          <source srcset="./assets/image/wedding-rings.png" type="image/png" media="(min-width: 576px) " />
+          <img class="card__image" src="./assets/image/wedding-rings.webp" alt="rin married" />
+        </picture>
+        <p class="card__description">
+          Elegant 14K Gold Ring, sophisticated design, and polished finish.
+          Showcase your style with this high-quality jewel and shine on special occasions.
+          An exceptional piece that will accompany you throughout your life! 💍✨
+        </p>
+        <form class="card__form">
+          <section class="card__input-color">
+            <p>Color Selection:</p>
+            <section class="card__color-options">
+              <div>
+                <label for="color-pink-1" class="color-option">Pink Gold</label>
+                <input type="radio" id="color-pink-1" name="color" value="blue" />
+              </div>
+              <div>
+                <label for="color-white-1" class="color-option">White Gold</label>
+                <input type="radio" id="color-white-1" name="color" value="green" />
+              </div>
+              <div>
+                <label for="color-yellow-1" class="color-option">Yellow Gold</label>
                 <input type="radio" id="color-yellow-1" name="color" value="yellow" />
-              </section>
-            </article>
-            <article>
-              <p>Ring Size Selection:</p>
-              <section class="ring-sizes">
+              </div>
+            </section>
+          </section>
+          <section class="card__input-sizes">
+            <p>Ring Size Selection:</p>
+            <section class="card__ring-sizes">
+              <div>
                 <label for="size-6-1" class="ring-size">6</label>
                 <input type="radio" id="size-6-1" name="size" value="6" />
+              </div>
+              <div>
                 <label for="size-7-1" class="ring-size">7</label>
                 <input type="radio" id="size-7-1" name="size" value="7" />
+              </div>
+              <div>
                 <label for="size-8-1" class="ring-size">8</label>
                 <input type="radio" id="size-8-1" name="size" value="8" />
-                <label for="size-9-1" class="ring-size">9</label>
-                <input checked type="radio" id="size-9-1" name="size" value="9" />
-              </section>
-            </article>
-            <button type="submit">Submit</button>
-          </form>
-        </footer>
+              </div>
+            </section>
+          </section>
+          <button class="card__btn-submit" type="submit">Submit</button>
+        </form>
       </article>
 
+      <!------------------------------ card 2 ------------------------------------>
       <article class="card">
-        <header>
-          <h3>Wedding Rings 2</h3>
-        </header>
-        <main>
-          <picture class="card__image">
-            <source srcset="./assets/image/wedding-rings.png" type="image/png" media="(min-width: 576px) " />
-            <img src="./assets/image/wedding-rings.webp" alt="rin married" />
-          </picture>
-        </main>
-        <footer>
-          <form>
-            <article>
-              <p>Color Selection:</p>
-              <section class="color-options">
-                <label for="color-red-2" class="color-option">Red</label>
-                <input type="radio" id="color-red-2" name="color" value="red" />
+        <h3 class="card__title">Wedding Rings 2</h3>
+        <picture class="card__image-container">
+          <source srcset="./assets/image/wedding-rings.png" type="image/png" media="(min-width: 576px) " />
+          <img class="card__image" src="./assets/image/wedding-rings.webp" alt="rin married" />
+        </picture>
+        <p class="card__description">
+          Elegant 14K Gold Ring, sophisticated design, and polished finish.
+          Showcase your style with this high-quality jewel and shine on special occasions.
+          An exceptional piece that will accompany you throughout your life! 💍✨
+        </p>
+        <form class="card__form">
+          <section class="card__input-color">
+            <p>Color Selection:</p>
+            <section class="card__color-options">
+              <div>
                 <label for="color-blue-2" class="color-option">Blue</label>
-                <input checked type="radio" id="color-blue-2" name="color" value="blue" />
+                <input type="radio" id="color-blue-2" name="color" value="blue" />
+              </div>
+              <div>
                 <label for="color-green-2" class="color-option">Green</label>
                 <input type="radio" id="color-green-2" name="color" value="green" />
+              </div>
+              <div>
                 <label for="color-yellow-2" class="color-option">Yellow</label>
                 <input type="radio" id="color-yellow-2" name="color" value="yellow" />
-              </section>
-            </article>
-            <article>
-              <p>Ring Size Selection:</p>
-              <section class="ring-sizes">
+              </div>
+            </section>
+          </section>
+          <section class="card__input-sizes">
+            <p>Ring Size Selection:</p>
+            <section class="card__ring-sizes">
+              <div>
                 <label for="size-6-2" class="ring-size">6</label>
-                <input checked type="radio" id="size-6-2" name="size" value="6" />
+                <input type="radio" id="size-6-2" name="size" value="6" />
+              </div>
+              <div>
                 <label for="size-7-2" class="ring-size">7</label>
                 <input type="radio" id="size-7-2" name="size" value="7" />
+              </div>
+              <div>
                 <label for="size-8-2" class="ring-size">8</label>
                 <input type="radio" id="size-8-2" name="size" value="8" />
-                <label for="size-9-2" class="ring-size">9</label>
-                <input type="radio" id="size-9-2" name="size" value="9" />
-              </section>
-            </article>
-            <button type="submit">Submit</button>
-          </form>
-        </footer>
+              </div>
+            </section>
+          </section>
+          <button class="card__btn-submit" type="submit">Submit</button>
+        </form>
       </article>
 
+      <!------------------------------ card 3 ------------------------------------>
       <article class="card">
-        <header>
-          <h3>Wedding Rings 3</h3>
-        </header>
-        <main>
-          <picture class="card__image">
-            <source srcset="./assets/image/wedding-rings.png" type="image/png" media="(min-width: 576px) " />
-            <img src="./assets/image/wedding-rings.webp" alt="rin married" />
-          </picture>
-        </main>
-        <footer>
-          <form>
-            <article>
-              <p>Color Selection:</p>
-              <section class="color-options">
-                <label for="color-red-3" class="color-option">Red</label>
-                <input type="radio" id="color-red-3" name="color" value="red" />
+        <h3 class="card__title">Wedding Rings 3</h3>
+        <picture class="card__image-container">
+          <source srcset="./assets/image/wedding-rings.png" type="image/png" media="(min-width: 576px) " />
+          <img class="card__image" src="./assets/image/wedding-rings.webp" alt="rin married" />
+        </picture>
+        <p class="card__description">
+          Elegant 14K Gold Ring, sophisticated design, and polished finish.
+          Showcase your style with this high-quality jewel and shine on special occasions.
+          An exceptional piece that will accompany you throughout your life! 💍✨
+        </p>
+        <form class="card__form">
+          <section class="card__input-color">
+            <p>Color Selection:</p>
+            <section class="card__color-options">
+              <div>
                 <label for="color-blue-3" class="color-option">Blue</label>
                 <input type="radio" id="color-blue-3" name="color" value="blue" />
+              </div>
+              <div>
                 <label for="color-green-3" class="color-option">Green</label>
                 <input type="radio" id="color-green-3" name="color" value="green" />
+              </div>
+              <div>
                 <label for="color-yellow-3" class="color-option">Yellow</label>
                 <input type="radio" id="color-yellow-3" name="color" value="yellow" />
-              </section>
-            </article>
-            <article>
-              <p>Ring Size Selection:</p>
-              <section class="ring-sizes">
+              </div>
+            </section>
+          </section>
+          <section class="card__input-sizes">
+            <p>Ring Size Selection:</p>
+            <section class="card__ring-sizes">
+              <div>
                 <label for="size-6-3" class="ring-size">6</label>
                 <input type="radio" id="size-6-3" name="size" value="6" />
+              </div>
+              <div>
                 <label for="size-7-3" class="ring-size">7</label>
                 <input type="radio" id="size-7-3" name="size" value="7" />
+              </div>
+              <div>
                 <label for="size-8-3" class="ring-size">8</label>
                 <input type="radio" id="size-8-3" name="size" value="8" />
-                <label for="size-9-3" class="ring-size">9</label>
-                <input type="radio" id="size-9-3" name="size" value="9" />
-              </section>
-            </article>
-            <button type="submit">Submit</button>
-          </form>
-        </footer>
+              </div>
+            </section>
+          </section>
+          <button class="card__btn-submit" type="submit">Submit</button>
+        </form>
       </article>
+
+
     </section>
   </main>
-  <footer>
-    <picture class="card__image">
-      <source srcset="./assets/image/Asset 1@3x.png" type="image/png" media="(min-width: 576px) " />
-      <img src="./assets/image/asset-1-3x.webp" alt="rin married" />
+  <!-- ************************************ footer ******************************************* -->
+  <footer class="footer">
+    <picture class="footer__logo-container">
+      <source srcset="./assets/image/logo-footer-xs.webp" type="image/webp" media="(max-width: 576px )">
+      <source srcset="./assets/image/logo-footer-sm.webp" type="image/webp" media="(max-width: 768px )">
+      <source srcset="./assets/image/logo-footer-md.webp" type="image/webp" media="(max-width: 992px )">
+      <source srcset="./assets/image/logo-footer-lg.webp" type="image/webp" media="(max-width: 1200px )">
+      <source srcset="./assets/image/logo-footer-xl.webp" type="image/webp" media="(max-width: 1440px )">
+      <source srcset="./assets/image/logo-footer-xxl.webp" type="image/webp" media="(max-width: 2160px )">
+      <img class="footer__logo" src="./assets/image/logo-footer.png" alt="rin married" />
     </picture>
-    <article>
+    <article class="footer__info">
       <p>© 2022 Mangata and Gallo</p>
     </article>
   </footer>
-  <script defer>
-
-    const btnHamburger = document.querySelector("#hamburger-btn")
-    const menuList = document.querySelector("#menu-list")
-    const nav = document.querySelector("nav")
-    const containerMenuIcons = document.querySelector("#container-menu-icons")
-    const lineBtn = document.querySelector("#hamburger-btn__line")
-
-    const video = document.querySelector("#video-container")
-
-    btnHamburger.addEventListener("click", () => {
-      const menuListPosition = window.getComputedStyle(menuList).getPropertyValue('position');
-      const btnHamburgerDisplay = window.getComputedStyle(btnHamburger).getPropertyValue('display');
-      if (menuListPosition == "fixed" && btnHamburgerDisplay == "flex") {
-        menuList.classList.toggle("active");
-        containerMenuIcons.classList.toggle("active");
-        btnHamburger.classList.toggle("active");
-        lineBtn.classList.toggle("active")
-      }
-    })
-
-  </script>
+  <!-- ************************************ aside ******************************************* -->
+  <section class="no-support">
+    <p class="no-support__text">Device no supported</p>
+  </section>
+  <script type="text/javascript" defer src="./js/script.js"></script>
 </body>
 
 </html>
