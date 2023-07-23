@@ -548,7 +548,7 @@ body.active {
     height: 3rem;
     transform: translate(0);
     background-color: inherit;
-    flex-flow: row-reverse wrap;
+    flex-flow: row wrap;
     justify-content: space-evenly;
 
   }
